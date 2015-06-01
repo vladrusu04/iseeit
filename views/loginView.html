@@ -1,0 +1,18 @@
+﻿<div class="container">
+    <section class="login">
+        <div class="icon logo"></div>
+
+        <ul class="nav nav-tabs nav-justified">
+            <li role="presentation" ng-class="{ active: stateIs('anon.login')}">
+                <a ui-sref="anon.login">Login</a>
+            </li>
+            <li role="presentation" ng-class="{ active: stateIs('anon.register')}">
+                <a ui-sref="anon.register">Register</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div ui-view></div>
+        </div>
+    </section>
+</div>

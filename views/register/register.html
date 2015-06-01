@@ -1,0 +1,41 @@
+<form class="form-signin" name="registerForm.mainForm">
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="form-group">
+                <input ng-model="user.email" type="email" name="email" class="form-control" placeholder="Email" required autofocus>
+                <div ng-messages="registerForm.mainForm.email.$error" class="error">
+                    <div ng-message="required">The email address is required</div>
+                    <div ng-message="email">The email address you provided is not valid</div>
+                </div>
+            </div>
+
+            <div class="form-group col-xs-6">
+                <input ng-model="user.fname" type="text" name="fname" class="form-control" placeholder="First Name" required>
+                <div ng-messages="registerForm.mainForm.fname.$error" class="error">
+                    <div ng-message="required">The first name field is required</div>
+                </div>
+            </div>
+
+            <div class="form-group col-xs-6">
+                <input ng-model="user.lname" type="text" name="lname" class="form-control" placeholder="Last Name" required>
+                <div ng-messages="registerForm.mainForm.lname.$error" class="error">
+                    <div ng-message="required">The last name field is required</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+
+        </div>
+    </div>
+
+    <button class="btn btn-grey" type="button" ng-click="cancel()">
+        <i class="icon icon-cancel"></i>
+        Cancel
+    </button>
+    <button class="btn btn-orange" type="button" ng-click="register()">
+        <i class="icon icon-ok"></i>
+        Register
+    </button>
+</form>

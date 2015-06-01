@@ -1,0 +1,140 @@
+.icon {
+  display: inline-block;
+}
+.logo {
+  background: url('../assets/sprite.png') no-repeat -2px 0;
+  width: 226px;
+  height: 120px;
+}
+.icon-ok {
+  background: url('../assets/sprite.png') no-repeat -2px -128px;
+  width: 30px;
+  height: 30px;
+}
+.icon-next {
+  background: url('../assets/sprite.png') no-repeat -34px -128px;
+  width: 30px;
+  height: 30px;
+}
+.icon-radio {
+  background: url('../assets/sprite.png') no-repeat -99px -128px;
+  width: 30px;
+  height: 30px;
+}
+.icon-radio.checked {
+  background: url('../assets/sprite.png') no-repeat -130px -128px;
+  width: 30px;
+  height: 30px;
+}
+.icon-cancel {
+  background: url('../assets/sprite.png') no-repeat -66px -128px;
+  width: 30px;
+  height: 30px;
+}
+.icon-error {
+  background: url('../assets/sprite.png') no-repeat -2px -163px;
+  width: 18px;
+  height: 16px;
+}
+body {
+  background: url('../assets/bg.png') top center no-repeat #53b1e6;
+  font-size: 14px;
+  color: #374350;
+}
+.nav-tabs > li,
+.nav-tabs > li.focus,
+.nav-tabs > li:focus,
+.nav-tabs > li:hover {
+  background: #cdcdcd;
+  font-size: 18px;
+}
+.nav-tabs > li a,
+.nav-tabs > li.focus a,
+.nav-tabs > li:focus a,
+.nav-tabs > li:hover a,
+.nav-tabs > li a:hover,
+.nav-tabs > li.focus a:hover,
+.nav-tabs > li:focus a:hover,
+.nav-tabs > li:hover a:hover {
+  color: #ffffff;
+}
+.nav-tabs > li.active,
+.nav-tabs > li.active.focus,
+.nav-tabs > li.active:focus,
+.nav-tabs > li.active:hover {
+  background: #fff;
+}
+.nav-tabs > li.active a,
+.nav-tabs > li.active.focus a,
+.nav-tabs > li.active:focus a,
+.nav-tabs > li.active:hover a,
+.nav-tabs > li.active a:hover,
+.nav-tabs > li.active.focus a:hover,
+.nav-tabs > li.active:focus a:hover,
+.nav-tabs > li.active:hover a:hover {
+  color: #376092;
+}
+.tab-content {
+  background: #fff;
+}
+.btn-orange {
+  background: #ff9c00;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 80px;
+  min-height: 80px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff !important;
+}
+.btn-orange .icon {
+  display: block;
+  margin: 0 auto 10px;
+}
+.error {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+.error .icon {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.logo {
+  display: block;
+  margin: 0 auto 20px;
+}
+.login {
+  margin: 10% 0;
+}
+.form-signin {
+  padding: 20px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control :focus {
+  z-index: 2;
+  border-color: #cdcdcd;
+}
+.form-signin input {
+  border: 0 solid #cdcdcd;
+  border-bottom-width: 1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: 10px;
+  box-shadow: none;
+}
+.form-signin input:focus {
+  border-color: #cdcdcd;
+}

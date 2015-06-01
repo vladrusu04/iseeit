@@ -1,0 +1,39 @@
+.login {
+  margin: 10% 0;
+}
+.form-signin {
+  padding: 20px;
+  margin: 0 auto;
+
+  .form-signin-heading,
+  .checkbox {
+    margin-bottom: 10px;
+  }
+
+  .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    :focus {
+      z-index: 2;
+      border-color: @placeholder;
+    }
+  }
+
+
+  input {
+    border: 0 solid @placeholder;
+    border-bottom-width: 1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-bottom: 10px;
+    box-shadow: none;
+    &:focus{
+      border-color: @placeholder;
+    }
+  }
+}

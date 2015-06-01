@@ -1,0 +1,74 @@
+@import "variables.less";
+@import "images.less";
+
+body {
+  background: url('../assets/bg.png') top center no-repeat @background;
+  font-size: 14px;
+  color: @font-color;
+}
+.nav-tabs{
+  &>li {
+    &,
+    &.focus,
+    &:focus,
+    &:hover {
+      background: @tab-inactive-back;
+      a {
+        &,
+        &:hover {
+          color: #fff
+        }
+      }
+      font-size: 18px;
+    }
+    &.active{
+      &,
+      &.focus,
+      &:focus,
+      &:hover {
+        background: #fff;
+        a {
+          &,
+          &:hover {
+            color: @header-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tab-content{
+  background: #fff;
+}
+
+.btn-orange{
+  background: @btn-orange;
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 80px;
+  min-height: 80px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff !important;
+  .icon {
+    display: block;
+    margin: 0 auto 10px;
+  }
+}
+
+.error {
+  color: @error-color;
+  margin-bottom: 10px;
+  .icon {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+@import "login.less";

@@ -1,0 +1,16 @@
+{
+  "name": "iSeeItApp Angular",
+  "description": "Simple dashboard app",
+  "version": "1.0.0",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.3.15",
+    "angular-mocks": "~1.3.15",
+    "angular-messages": "~1.3.15",
+    "angular-touch": "~1.3.15",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.4"
+  }
+}

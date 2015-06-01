@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="iSeeIt">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
+    <title>I See It</title>
+
+    <link href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic,500italic' rel='stylesheet'
+          type='text/css'>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+</head>
+<body>
+    <div ui-view></div>
+
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-touch/angular-touch.min.js"></script>
+
+    <!-- build:js scripts/minify/app.min.js-->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/login/authFactory.js"></script>
+    <script src="scripts/login/loginController.js"></script>
+    <script src="scripts/register/registerController.js"></script>
+    <script src="scripts/dashboard/dashController.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

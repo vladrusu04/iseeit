@@ -1,0 +1,36 @@
+.spritebox(@width, @height, @top, @left) {
+  background: url('../assets/sprite.png') no-repeat @top @left;
+  width: @width;
+  height: @height;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.logo {
+  .spritebox(226px, 120px, -2px, 0);
+}
+
+.icon-ok {
+  .spritebox(30px, 30px, -2px, -128px);
+}
+
+.icon-next {
+  .spritebox(30px, 30px, -34px, -128px);
+}
+
+.icon-radio {
+  .spritebox(30px, 30px, -99px, -128px);
+  &.checked {
+    .spritebox(30px, 30px, -130px, -128px);
+  }
+}
+
+.icon-cancel {
+  .spritebox(30px, 30px, -66px, -128px);
+}
+
+.icon-error{
+  .spritebox(18px, 16px, -2px, -163px);
+}
