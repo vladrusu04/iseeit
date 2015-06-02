@@ -5,6 +5,7 @@ iSeeIt.mainApp.controller('LoginController', ['$rootScope', '$scope', '$state', 
         'use strict';
 
         $scope.user = {};
+        $rootScope.fullRegister = false;
 
         /**
          * Method to login the user in the application

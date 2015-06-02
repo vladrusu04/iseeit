@@ -37,13 +37,17 @@ body {
     }
   }
 }
-
+.container{
+  &.small{
+    width: 576px;
+  }
+}
 .tab-content{
   background: #fff;
 }
 
-.btn-orange{
-  background: @btn-orange;
+.btn-custom {
+  background: @btn-grey;
   border-radius: 5px;
   padding: 10px;
   min-width: 80px;
@@ -55,6 +59,17 @@ body {
     display: block;
     margin: 0 auto 10px;
   }
+
+  &.btn-orange{
+    background: @btn-orange;
+  }
+  &.btn-blue{
+    background: @btn-blue;
+  }
+}
+
+.right-space {
+  margin-right: 15px;
 }
 
 .error {

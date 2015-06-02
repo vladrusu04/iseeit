@@ -73,7 +73,8 @@ iSeeIt.mainApp.run(['$rootScope', 'Auth', '$state', function ($rootScope, Auth, 
 
     //if the user doesn't have the right access level redirect to login
     $rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState) {
-        if (fromState.url === '^' && !Auth.authorize(toState.data.access)) {
+        if (!Auth.authorize(toState.data.access)) {
+            event.preventDefault();
             $state.go('anon.login');
         }
     });

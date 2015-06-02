@@ -1,0 +1,21 @@
+<div class="form-group col-xs-12">
+    <div ng-messages="registerForm.mainForm.email.$error" class="error" ng-if="submitted || registerForm.mainForm.email.$dirty">
+        <div ng-message="required">Please provide your business email address</div>
+        <div ng-message="email">The email address you provided is not valid</div>
+    </div>
+    <input ng-model="user.email" type="email" name="email" class="form-control" placeholder="Email * (Please provide your professional email)" required autofocus>
+</div>
+
+<div class="form-group col-xs-6">
+    <div ng-messages="registerForm.mainForm.fname.$error" class="error" ng-if="submitted || registerForm.mainForm.fname.$dirty">
+        <div ng-message="required">Please provide your first name</div>
+    </div>
+    <input ng-model="user.fname" type="text" name="fname" class="form-control" placeholder="First Name *" required>
+</div>
+
+<div class="form-group col-xs-6">
+    <div ng-messages="registerForm.mainForm.lname.$error" class="error" ng-if="submitted || registerForm.mainForm.lname.$dirty">
+        <div ng-message="required">Please provide your last name</div>
+    </div>
+    <input ng-model="user.lname" type="text" name="lname" class="form-control" placeholder="Last Name *" required>
+</div>

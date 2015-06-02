@@ -20,6 +20,7 @@
   background: url('../assets/sprite.png') no-repeat -99px -128px;
   width: 30px;
   height: 30px;
+  vertical-align: middle;
 }
 .icon-radio.checked {
   background: url('../assets/sprite.png') no-repeat -130px -128px;
@@ -74,11 +75,14 @@ body {
 .nav-tabs > li.active:hover a:hover {
   color: #376092;
 }
+.container.small {
+  width: 576px;
+}
 .tab-content {
   background: #fff;
 }
-.btn-orange {
-  background: #ff9c00;
+.btn-custom {
+  background: #d2d2d2;
   border-radius: 5px;
   padding: 10px;
   min-width: 80px;
@@ -87,9 +91,18 @@ body {
   font-weight: bold;
   color: #fff !important;
 }
-.btn-orange .icon {
+.btn-custom .icon {
   display: block;
   margin: 0 auto 10px;
+}
+.btn-custom.btn-orange {
+  background: #ff9c00;
+}
+.btn-custom.btn-blue {
+  background: #3d6a9d;
+}
+.right-space {
+  margin-right: 15px;
 }
 .error {
   color: #ff0000;
@@ -122,6 +135,7 @@ body {
   box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
+  box-shadow: none;
 }
 .form-signin .form-control :focus {
   z-index: 2;

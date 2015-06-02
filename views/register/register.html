@@ -1,41 +1,89 @@
 <form class="form-signin" name="registerForm.mainForm">
-
-    <div class="row">
-        <div class="col-xs-6">
-            <div class="form-group">
-                <input ng-model="user.email" type="email" name="email" class="form-control" placeholder="Email" required autofocus>
-                <div ng-messages="registerForm.mainForm.email.$error" class="error">
-                    <div ng-message="required">The email address is required</div>
-                    <div ng-message="email">The email address you provided is not valid</div>
-                </div>
-            </div>
-
-            <div class="form-group col-xs-6">
-                <input ng-model="user.fname" type="text" name="fname" class="form-control" placeholder="First Name" required>
-                <div ng-messages="registerForm.mainForm.fname.$error" class="error">
-                    <div ng-message="required">The first name field is required</div>
-                </div>
-            </div>
-
-            <div class="form-group col-xs-6">
-                <input ng-model="user.lname" type="text" name="lname" class="form-control" placeholder="Last Name" required>
-                <div ng-messages="registerForm.mainForm.lname.$error" class="error">
-                    <div ng-message="required">The last name field is required</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-6">
-
+    <div class="row" ng-if="!fullRegister">
+        <div ng-include="'views/register/small-register.html'"></div>
+        <div class="col-xs-12">
+            <button class="btn btn-custom btn-blue pull-right" type="button" ng-click="setFullRegister()">
+                <i class="icon icon-next"></i>
+                Next
+            </button>
         </div>
     </div>
+    <div class="row" ng-if="fullRegister">
+        <div class="col-xs-6">
+            <div ng-include="'views/register/small-register.html'"></div>
+            <div class="form-group col-xs-12">
+                <div ng-messages="registerForm.mainForm.company.$error" class="error" ng-if="submitted || registerForm.company.lname.$dirty">
+                    <div ng-message="required">Please provide your company name</div>
+                </div>
+                <input ng-model="user.company" type="text" name="company" class="form-control" placeholder="Company *" required />
+            </div>
 
-    <button class="btn btn-grey" type="button" ng-click="cancel()">
-        <i class="icon icon-cancel"></i>
-        Cancel
-    </button>
-    <button class="btn btn-orange" type="button" ng-click="register()">
-        <i class="icon icon-ok"></i>
-        Register
-    </button>
+            <div class="form-group col-xs-12">
+                <div ng-messages="registerForm.mainForm.position.$error" class="error" ng-if="submitted || registerForm.mainForm.position.$dirty">
+                    <div ng-message="required">Please provide your position inside the company</div>
+                </div>
+                <input ng-model="user.position" type="text" name="position" class="form-control" placeholder="Position *" required />
+            </div>
+
+            <div class="form-group col-xs-12">
+                <div ng-messages="registerForm.mainForm.password.$error" class="error" ng-if="submitted || registerForm.mainForm.password.$dirty">
+                    <div ng-message="required">Please provide the password</div>
+                    <div ng-message="pattern">The password must contain at least 6 characters.</div>
+                </div>
+                <input ng-model="user.password" type="password" name="password" class="form-control" placeholder="Password *" required ng-pattern="/.{6,}/g" />
+            </div>
+
+            <div class="form-group col-xs-12">
+                <div ng-messages="registerForm.mainForm.confPassword.$error" class="error" ng-if="submitted || registerForm.mainForm.confPassword.$dirty" >
+                    <div ng-message="required">Please provide the password confirmation</div>
+                    <div ng-message="passwordCheck">The confirm password is not similar with the password</div>
+                </div>
+                <input ng-model="user.confPassword" type="password" name="confPassword" class="form-control" placeholder="Confirm Password *" required password-check="user.password" />
+            </div>
+
+            <div class="form-group col-xs-12">
+                <div ng-messages="registerForm.mainForm.terms.$error" class="error" ng-if="submitted || registerForm.mainForm.terms.$dirty" >
+                    <div ng-message="required">Please read and agree with the terms and conditions bellow</div>
+                </div>
+                <input type="checkbox" class="hidden" ng-model="user.terms" id="terms" name="terms" required />
+                <label for="terms">
+                    <i class="icon icon-radio" ng-class="{'checked' : user.terms}"></i>
+                    I read and agree with the Terms and Conditions
+                </label>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-group col-xs-12">
+                <input ng-model="user.nrEmp" type="text" name="nrEmp" class="form-control" placeholder="Number of employees inside the company" />
+            </div>
+
+            <div class="form-group col-xs-12">
+                <input ng-model="user.phone" type="text" name="phone" class="form-control" placeholder="Phone" />
+            </div>
+
+            <div class="form-group col-xs-12">
+                <input ng-model="user.country" type="text" name="nrEmp" class="form-control" placeholder="Country" />
+            </div>
+
+            <div class="form-group col-xs-12">
+                <input ng-model="user.invCode" type="text" name="invCode" class="form-control" placeholder="Invitation code" />
+            </div>
+
+            <div class="col-xs-12">
+                <button class="btn btn-custom btn-orange pull-right" type="button" ng-click="register()">
+                    <i class="icon icon-ok"></i>
+                    Register
+                </button>
+                <button class="btn btn-custom pull-right right-space" type="button" ng-click="cancel()">
+                    <i class="icon icon-cancel"></i>
+                    Cancel
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
 </form>
+
